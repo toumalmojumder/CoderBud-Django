@@ -18,7 +18,9 @@
         <div class="col-md-10 offset-md-1 mt-5">
             <div class="jumbotron">
                 <h1 class="display-4">Employee TA/DA Entry</h1>
-                <p class="lead font-italic">CoderBud</p>
+                <p class="lead font-italic">
+                    <a href="{% url 'tada_pdf'%}"><i class="far fa-file-pdf"></i>  Generate Pdf</a>
+                </p>
                 <hr class="my-4">
                 {% block content %}
 

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'employee_entry',
     'crispy_forms',
     'mathfilters',
+    'reportlab'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
