@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.tada_form),
-    path('tada/', views.tada_list)
+    path('list/', views.tada_list)
 ]

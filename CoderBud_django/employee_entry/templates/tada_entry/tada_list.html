@@ -1,0 +1,38 @@
+{% extends "tada_entry/base.html" %}
+
+
+{% block content %}
+
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td>Date</td>
+            <td>Name</td>
+            <td>Travel Cost</td>
+            <td>Lunch Cost</td>
+            <td>Instrument Cost</td>
+            <td>Total Cost</td>
+            <td>Paid</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tada in tada_list %}
+        <tr>
+            <td>{{tada.date}}</td>
+            <td>{{tada.employee_name}}</td>
+            <td>{{tada.travel_cost}}</td>
+            <td>{{tada.lunch_cost}}</td>
+            <td>{{tada.instruments_cost}}</td>
+            {% load mathfilters %}
+            {% with answer=tada.travel_cost|add:tada.lunch_cost %}
+            <td> {{ answer|add:tada.instruments_cost }}</td>
+            {% endwith %}
+            
+            <td>{{tada.paid}}</td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}

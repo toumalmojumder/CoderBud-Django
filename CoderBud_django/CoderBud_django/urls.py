@@ -19,5 +19,5 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('employee/', include('employee_entry.urls'))
+    path('tada/', include('employee_entry.urls'))
 ]
